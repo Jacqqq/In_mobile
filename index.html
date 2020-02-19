@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/theme/night.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css">
@@ -21,34 +21,915 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
+
+    <style type="text/css">
+        .reveal pre {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 0.55em;
+    font-family: monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal pre code {
+    display: block;
+    padding: 5px;
+    overflow: auto;
+    max-height: 400px;
+    word-wrap: normal;
+}
+.reveal code {
+    font-family: monospace;
+    text-transform: none;
+}
+
+    </style>
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
+
+        <!--        sections-->
+
         <section>
-            <code> Sample
-                few code
-                of lines</code>
-            <section>inner 1</section>
-            <section>inner 2</section>
-            <section>inner 3</section>
+            <h3>
+                [Flutter]<br>
+                No 3rd party library available?<br>
+                Let’s do our own!
+            </h3>
+            <br>
+            <h4>Jacek Krasowski</h4>
+            <aside class="notes" data-markdown>
+                * working for Intive for almost 5 years now
+                * started as an Android dev and worked on few projects during that time, mostly VOD stuff
+                * from last November - Flutter developer, do I like it? It has potential, I'm an enthusiast :)
+            </aside>
+        </section>
+
+        <section>
             <section>
-	<pre><code data-trim data-noescape>
-(def lazy-fib
-  (concat
-   [0 1]
-   <mark>((fn rfib [a b]</mark>
-        (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-	</code></pre>
+                <h3>What is Flutter</h3>
+            </section>
+
+            <section>
+                <h3> UI software development kit created by Google. </h3>
+            </section>
+
+            <section>
+                <h3>Timeline</h3>
+                <p class="fragment">First version of flutter framework was released in 2015</p>
+                <p class="fragment">Flutter 1.0 - December 4th, 2018, the first "stable" version of the Framework.</p>
+                <p class="fragment">FLutter 1.12 - December 2019 (Current version)</p>
+            </section>
+
+            <section>
+                <h3>Flutter supports:</h3>
+                <ul>
+                    <li class="fragment"><strong>Android</strong></li>
+                    <li class="fragment"><strong>iOS</strong></li>
+                    <li class="fragment">Windows</li>
+                    <li class="fragment">Mac</li>
+                    <li class="fragment">Linux</li>
+                    <li class="fragment">Google Fuchsia</li>
+                    <li class="fragment">Web</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Take it or leave it?</h3>
+                <ul>
+                    <li class="fragment fade-in">
+                        Framework where you write logic once, flutter builds it for many platforms
+                    </li>
+                    <li class="fragment fade-in">
+                        Composing UI elements is quicker than native
+                    </li>
+                    <li class="fragment fade-in">
+                        Hot reload speeds up development
+                    </li>
+                    <li class="fragment fade-in">
+                        Adding and publishing new libraries is fairly simple
+                    </li>
+                    <li class="fragment fade-in">
+                        Community is growing
+                    </li>
+                </ul>
+
+            </section>
+            <section>
+                <h3>Take it or leave it?</h3>
+                <ul>
+                    <li class="fragment fade-in">
+                        In the real world it’s not that shiny yet…
+                    </li>
+                    <li class="fragment fade-in">
+                        Still many edge-cases with no support
+                    </li>
+                    <li class="fragment fade-in">
+                        con2 todo
+                    </li>
+                    <li class="fragment fade-in">
+                        con3 todo
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+
+            <h3>Flutter project types:</h3>
+            <ul>
+                <li class="fragment"><strong>Application</strong> => end users</li>
+                <li class="fragment"><strong>Plugin</strong> => library with native implementations</li>
+                <li class="fragment"><strong>Package</strong> => pure Dart component, like new Widget</li>
+                <li class="fragment"><strong>Module</strong> => to be used on Android or iOS as a component</li>
+            </ul>
+        </section>
+        <section>
+            <section>
+                <h3>Tools</h3>
+                <aside class="notes" data-markdown>
+                    * How to use flutter framework and what tools have it integrated
+                </aside>
+            </section>
+            <section>
+
+                <h3>IDEs</h3>
+
+                <img class="fragment" data-src="/images/as_icon.png" height="200" width="200">
+                <img class="fragment" data-src="/images/vs_code_icon.png" height="200" width="200">
+
+                <h3 class="fragment">or</h3>
+                <img class="fragment" data-src="/images/terminal_icon.png" height="200" width="200">
+
+                <aside class="notes" data-markdown>
+                    * IDEs giving us user friendly UI
+                    * and terminal using flutter framework directly
+                </aside>
+            </section>
+
+            <section>
+                <h3>Android Studio</h3>
+                <img data-src="/images/as_icon.png" height="200" width="200">
+                <pre>
+                    <code class="plaintext" data-trim data-noescape>
+                        File
+                        New Flutter Project
+                        Choose between Application/Package/Plugin/Module
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Visual Studio Code</h3>
+                <img data-src="/images/vs_code_icon.png" height="200" width="200">
+                <pre>
+                    <code class="plaintext" data-trim data-noescape>
+                        Start Command Palette [Cmd shift P]
+                        Type: 'Flutter: New Project' (Only Flutter Application)
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Terminal</h3>
+                <img data-src="/images/terminal_icon.png" height="200" width="200">
+                <pre>
+                    <code class="plaintext" data-trim data-noescape>
+                        All options available here
+                    </code>
+                </pre>
             </section>
 
         </section>
-        <section>Slide 2</section>
-        <section>Slide 2</section>
-        <section>Slide 2</section>
-        <section>Slide 2</section>
-        <section>Slide 2</section>
+
+        <section>
+            <section>
+                <h3>Let's do something serious now</h3>
+                <img class="fragment" data-src="/images/cat_serious.gif">
+            </section>
+
+            <section>
+                <h3>Creation of new Plugin</h3>
+                <p>
+<!--                    <code class="plaintext" data-trim data-noescape>-->
+                        flutter <p class="fragment grow">create</p> --org com.jk --template=plugin -i swift -a kotlin sampleBatteryStateReader
+<!--                    </code>-->
+                </p>
+                <aside class="notes" data-markdown>
+                    * package name in reversed order
+                    * template set to plugin specifying project type
+                    * -i swift or objc
+                    * -a kotlin or java
+                    * project name in the end
+                    * firing that command gives us running project with sample Flutter Application inside
+                </aside>
+            </section>
+        </section>
+
+        <section>Implementacja przykłądowego Pluginu (battery?)
+
+            lib
+            ios
+            android
+
+            Using channels for async call + exposing a stream of data provided by native
+        </section>
+
+        <section>
+
+            Publish to pub!
+
+            How to polish your publish :) (for better score)
+
+        </section>
+
+
+        <section>
+            <h3>Thank you!</h3>
+
+            <br>
+            Presentation can be found on: jacqqq.github.io/flutter_libs
+
+            <aside class="notes" data-markdown>
+                *
+                *
+            </aside>
+        </section>
+
+
+        <!--        remove from here-->
+
+        <section>
+            <section>
+                <pre><code class="kotlin" data-trim>
+                    fun startEngines(): CompletableFuture&lt;Int&gt; {
+                        return CompletableFuture.supplyAsync {
+                            println("Starting engines from Completable Future")
+                            Thread.sleep(700) //heavy work
+                            120
+                        }
+                    }</code></pre>
+                <aside class="notes" data-markdown>
+                    * We have here two async functions using Completable Future to spin off async tasks.
+                </aside>
+            </section>
+            <section>
+                <pre><code class="kotlin" data-trim>
+                    fun startAutoCleaning(): CompletableFuture&lt;Boolean&gt; {
+                        return CompletableFuture.supplyAsync {
+                            println("Starting cleaning from Completable Future")
+                            Thread.sleep(500) //takes a while too
+                            throw RuntimeException()
+                        }
+                    }</code></pre>
+            </section>
+            <section>
+            <pre>
+                <code class="kotlin" data-trim data-noescape>
+                fun initiateStart() {
+                    val engineFuture = spaceship.startEngines()
+                    val cleaningFuture = spaceship.startAutoCleaning()
+
+                    println("Futures started!")
+
+                    spaceship.setOff(engineFuture.get())
+                    spaceship.reportCleaning(cleaningFuture.get())
+                }
+                </code>
+            </pre>
+                <aside class="notes" data-markdown>
+                    * This looks more or less fine, right?
+                    * start async to save some time.
+                    * When the engines are on, the we're gonna set off with the speed reported by the engines.
+                    * The problem is that futures are known as hot sources.
+                    * Here, the futures are unrelated to each other when these futures are unrelated
+                    * two bad things may happen: engines resource leak OR engine failure unsupported
+                </aside>
+            </section>
+            <section>
+                <pre><code class="plaintext stretch" data-trim data-noescape>
+                Starting engines from Completable Future
+                Futures started!
+                Starting cleaning from Completable Future
+                <p class="fragment fade-in">
+                Spaceship is taking off with speed: 120
+                </p>
+                <p class="fragment fade-in">
+                java.util.concurrent.ExecutionException: java.lang.RuntimeException
+                at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+                at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1999)
+                </p>
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    * code is indeed executed async -> logs are not sequential
+                    * Engines complete successfully, but cleaning fails and this failure is not handled properly.
+                    * We see fire in the cleaning system and the spaceship sets of anyway.
+                    * Maybe we have solved the mystery of Leto I; found a possible cause
+                    * Can Mark solve this issue and not get his spaceship blown up?
+                </aside>
+            </section>
+            <section>
+            <pre>
+                <code class="kotlin" data-trim data-noescape>
+                    fun initiateStart() {
+                        spaceship.reportCleaning(
+                            spaceship.startEngines()
+                                .thenCombine(spaceship.startAutoCleaning())
+                                { speed, isCleaningOk ->
+                                    spaceship.setOff(speed)
+                                    isCleaningOk
+                                }
+                                .get()
+                        )
+                    }
+                </code>
+            </pre>
+                <aside class="notes" data-markdown>
+                    * One possible solution to this problem is using <b>combinators</b>.
+                    * They basically allow you to combine multiple futures and handles failures properly.
+                </aside>
+            </section>
+            <section>
+                <pre><code class="plaintext" data-trim data-noescape>
+                Starting engines from Completable Future
+                Starting cleaning from Completable Future
+                java.util.concurrent.ExecutionException: java.lang.RuntimeException
+                at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+                at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1999)
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    * more or less fine actually.
+                    * Combinator cancelled when any of the futures completes exceptionally
+                </aside>
+            </section>
+            <section>
+            <pre>
+                <code class="kotlin" data-trim data-noescape>
+                    fun initiateStart() {
+                        spaceship.reportCleaning(
+                            spaceship.startEngines()
+                                .thenCombine(spaceship.startAutoCleaning())
+                                { speed, isCleaningOk ->
+                                    spaceship.setOff(speed)
+                                    isCleaningOk
+                                }
+                                .get()
+                        )
+                    }
+                </code>
+            </pre>
+                <aside class="notes" data-markdown>
+                    * But, it looks horrible! I mean look at this code!
+                    * Can you read it for the first time and see what it's doing?
+                    * Calling this spaghetti code is like calling the whole where you to pee in a train a toilet.
+                    * I know that there are Pendolino trains, but they don't go to Lublin.
+                    * Let's try and make it slightly more bearable.
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Kotlin Coroutines</h3>
+                <h3>to the rescue!</h3>
+                <aside class="notes" data-markdown>
+                    * How is this going to help Mark not get blown up
+                    * how is this going to help you write async code you are familiar with?
+                </aside>
+            </section>
+            <section>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        suspend fun startEngines(): Int =
+                            withContext(Dispatchers.IO) {
+                                println("Starting engines")
+                                delay(700)
+                                190
+                            }
+                    </code>
+                </pre>
+                <p class="fragment" data-code-focus="1"/>
+                <aside class="notes" data-markdown>
+                    * first modify the the spaceship functions
+                    * suspending functions instead of using Completable Futures and simply return their values.
+                    * we don't only want to declare them as suspending, but we actually want to make them suspending.
+                    * What does suspending even mean?
+                    * its execution can be paused and resumed later without blocking the calling thread
+                </aside>
+            </section>
+            <section>
+                <p class="fragment" data-code-focus="1">
+                    <i>callback</i> is used to resume computation
+                </p>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        fun startEngines(callback: Continuation&lt;Int&gt;): Int =
+                            withContext(Dispatchers.IO) {
+                                println("Starting engines")
+                                delay(700)
+                                190
+                            }
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * How is this done?
+                    * compiled to functions with a callback parameter which is used to resume the execution of the
+                    function.
+                </aside>
+            </section>
+            <section>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        public interface Continuation<in T> {
+                           public val context: CoroutineContext
+
+                           public fun resumeWith(result: Result<T>)
+                        }
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * Continuation is pretty simple, only one function
+                </aside>
+            </section>
+            <section>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        suspend fun autoClean(): Boolean =
+                           withContext(Dispatchers.IO) {
+                               println("Starting cleaning")
+                               delay(500)
+                               throw RuntimeException()
+                           }
+                    </code>
+                </pre>
+                <p class="fragment" data-code-focus="2"/>
+                <aside class="notes" data-markdown>
+                    * also need to change the second function
+                    * But you're probably asking yourself what is this withContext() function?
+                    * does the suspending magic.
+                    * It calls the given block, suspends until it completes and returns the result.
+                    * It also takes an implicit coroutine context parameter, which here is a Dispatcher.
+                    * Dispatchers describe how the computation should be scheduled.
+                    * function is not CPU intensive and we just want to wait for so use IO
+                </aside>
+            </section>
+            <section>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                    suspend fun initiateStart() = coroutineScope {
+                        val engineDeferred = async { suspendingShip.startEngines() }
+                        val cleaningDeferred = async { suspendingShip.autoClean() }
+
+                        println("Coroutines started!")
+
+                        spaceship.setOff(engineDeferred.await())
+                        spaceship.reportCleaning(cleaningDeferred.await())
+                    }
+                    </code>
+                </pre>
+                <p class="fragment" data-code-focus="1"/>
+                <aside class="notes" data-markdown>
+                    * With coroutines we can write it was sequential; can almost go back to beginning and it will be correct.
+                    * easy to write and readable: almost the same structure, but wrap in coroutineScope and async
+                    * Concurrency -like the language is explicit: create a CoroutineScope at top, which wraps all the computation
+                    * simplifying: 2 properties: each scope waits for its children to finish (reason sequentially), second: propagate
+                    cancellation
+                    * can only launch coroutines in a Coroutine Scope, beceause computation should be in a context.
+                    * spin off concur. computation for some time and clean up
+                    * entity with a well-defined lifecycle, responsible for launching and cancelling children coroutines.
+                </aside>
+            </section>
+            <section>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                    suspend fun initiateStart() = coroutineScope {
+                        val engineDeferred = async { suspendingShip.startEngines() }
+                        val cleaningDeferred = async { suspendingShip.autoClean() }
+
+                        println("Coroutines started!")
+
+                        spaceship.setOff(engineDeferred.await())
+                        spaceship.reportCleaning(cleaningDeferred.await())
+                    }
+                    </code>
+                </pre>
+                <p class="fragment" data-code-focus="2,3"/>
+                <aside class="notes" data-markdown>
+                    * Now: where are these coroutines and what are they? Well, they're right here!
+                    * lightweight threads, you should not be afraid creating them, you're encouraged to create many
+                    * Which I guess is kind of exemplified by how easy it is to create and use them.
+                    * Async is an extension method on CoroutineScope (don't worry) it operates on the coroutine scope we created
+                    * async{} creates a new coroutine and it returns its future result as Deferred (Kotlin's Future)
+                    * It's scoped and CoroutineScope handles cancellation, so Deferred is fail-safe.
+                    * one of Kotlin coroutine builders and they all create their own CoroutineScope, to launch their children
+                    computation.
+                </aside>
+            </section>
+            <section>
+                <h4>They all create their own CoroutineScope</h4>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        withContext {}
+                        coroutineScope {}
+                        async {}
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * All coroutine builders and scoping functions (these special coroutine functions that we've seen)
+                    create their own CoroutineScope. Let's not go too deep into the rabbit hole, but I hope you get the
+                    idea.
+                </aside>
+            </section>
+        </section>
+        <section data-background-image="images/orion.jpg">
+            <aside class="notes" data-markdown>
+                * Helped Mark find a possible cause of Leto I
+                * Standard nice way to decompose tasks in parallel
+                * He's off from Phobos to attempt landing on Mars
+                * First a reconnaissance flight
+            </aside>
+        </section>
+        <section>
+            <section>
+                 <pre>
+                    <code class="kotlin stretch" data-trim data-noescape>
+                    private fun getTempReading(): SensorReading {
+                        Thread.sleep(500) //sensor processing data
+                        return SensorReading("temp", -270.1)
+                    }<p class="fragment" data-code-focus="2"/>
+                    <p class="fragment fade-in">
+                    private fun getSolarReading(): SensorReading {
+                        Thread.sleep(700) //sensor processing data
+                        return SensorReading("sun", 372.0)
+                    }
+                    </p>
+                    <p class="fragment fade-in">
+                    fun getAllReadings(): List&lt;SensorReading&gt; = listOf(
+                        getTempReading(),
+                        getSolarReading()
+                    )
+                    </p>
+                    </code>
+                 </pre>
+                <aside class="notes" data-markdown>
+                    * First attempt
+                    * Lots of sensors
+                </aside>
+            </section>
+            <section data-background-image="images/rocks.jpg">
+                <aside class="notes" data-markdown>
+                    * Correct the path
+                </aside>
+            </section>
+            <section>
+                <pre>
+                    <code class="kotlin stretch" data-trim data-noescape>
+                        fun main() = runBlocking {
+                            launch {
+                                for (i in 1..5) {
+                                    println("Actively correcting path...")
+                                    delay(500)
+                                }
+                            }
+                            println("Waiting for the coroutine to launch...")
+                            delay(500)
+                        <p class="fragment" data-code-focus="2"/>
+                        <p class="fragment" data-code-focus="8,9"/>
+                        <p class="fragment fade-in">
+                            println("Starting blocking measurements...")
+                            val readings = SensorController.getAllReadings()
+                            println(readings)
+                            readings.forEach {
+                                Thread.sleep(1000) //Mark's validation
+                                println(it)
+                            }
+                        }
+                        <p class="fragment" data-code-focus="14"/>
+                        <p class="fragment" data-code-focus="17"/>
+                        </p>
+                    </code>
+                 </pre>
+                <aside class="notes" data-markdown>
+                    * We don't want to be blocked so that we don't fly into NASA's rubbish.
+                    * Mark will validate each of them before accepting it.
+                    * taking the measurements will block the main thread
+                </aside>
+            </section>
+            <section>
+                <video class="stretch" src="images/blocking.mov" data-autoplay></video>
+                <aside class="notes" data-markdown>
+                    * So we're not actually doing what we were suggested to do
+                    * async without blocking the main thread.
+                    * Process one by one
+                    * How? Suspending functions!
+                </aside>
+            </section>
+            <section>
+                <pre>
+                    <code class="kotlin stretch" data-trim data-noescape>
+                        private suspend fun getTempReadingSuspending(): SensorReading {
+                            delay(500) //sensor processing data
+                            return SensorReading("temp", -270.1)
+                        }
+                        <p class="fragment fade-in">
+                        private suspend fun getSolarReadingSuspending(): SensorReading {
+                            delay(700) //sensor processing data
+                            return SensorReading("sun", 372.0)
+                        }
+                        </p>
+                        <p class="fragment fade-in">
+                        fun getAllReadingsInFlow(): Flow&lt;SensorReading&gt; = flow {
+                            emit(getTempReadingSuspending())
+                            emit(getSolarReadingSuspending())
+                        }
+                        </p>
+                    </code>
+                 </pre>
+                <p class="fragment" data-code-focus="12"/>
+                <p class="fragment" data-code-focus="13,14"/>
+                <aside class="notes" data-markdown>
+                    * Suspending functions
+                    * Cold Flow - no resources are bound
+                    * Create the flow from the suspendable block
+                    * Emit items - declares values as being later available
+                </aside>
+            </section>
+            <section>
+                <pre>
+                    <code class="kotlin stretch" data-trim data-noescape>
+                        fun main() = runBlocking {
+                            launch {
+                                repeat (15) {
+                                    println("Actively correcting path...")
+                                    delay(500)
+                                }
+                            }
+                            println("Waiting for the coroutine to launch...")
+                            delay(500)
+                        <p class="fragment fade-in">
+                            println("Starting non-blocking measurements...")
+                            val flow = SensorController.getAllReadingsInFlow()
+                            println(flow)
+                            flow.collect {
+                                delay(1000) //Mark's validation
+                                println(it)
+                            }
+                        }
+                        </p>
+                    </code>
+                 </pre>
+                <p class="fragment" data-code-focus="14"/>
+                <aside class="notes" data-markdown>
+                    * Should be async
+                    * Terminal action - triggers the flow
+                </aside>
+            </section>
+            <section>
+                <video class="stretch" src="images/flows.mov" data-autoplay></video>
+                <aside class="notes" data-markdown>
+                    * Flow for returning multilpe items
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>RxKotlin?</h2>
+                <aside class="notes" data-markdown>
+                    * Why should Mark care?
+                    * different from Rx implementation.
+                    * Mark is far in the outer space, far from Houston.
+                    * you can improve something in your toolbox
+                </aside>
+            </section>
+            <section>
+                <h3>"Be warned that writing (reactive) operators is hard..."</h3>
+                <br>
+                *from the ReactiveX documentation
+                <aside class="notes" data-markdown>
+                    * difficult
+                    * backpressure
+                    * you get a ton of operators, but otherwise - tough luck
+                </aside>
+            </section>
+            <section>
+                <h4>Flows under the bonnet</h4>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        interface Flow&lt;out T&gt; {
+                           suspend fun collect(collector: FlowCollector&lt;T&gt;)
+                        }
+                        <p class="fragment fade-in">
+                        interface FlowCollector&lt;in T&gt; {
+                            suspend fun emit(value: T)
+                        }
+                        </p>
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * Built upon 3 elements
+                    * Flows follow extension-oriented design
+                    * built upon suspending functions.
+                    * backpressure for free
+                </aside>
+            </section>
+            <section>
+                <h4>Flows under the bonnet</h4>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                    suspend fun &lt;T&gt; Flow&lt;T&gt;.collect(action: suspend (value: T) -> Unit) =
+                            collect(object : FlowCollector&lt;T&gt; {
+                                        override suspend fun emit(value: T) = action(value)
+                                        }
+                                    )
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * all actions are suspendable
+                    * the entire flow is suspended until the terminal operator
+                    * actions will too be suspended when they take time
+                </aside>
+            </section>
+            <section>
+                <h4>Custom operator</h4>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                    fun Flow&lt;SensorReading&gt;.validateMeasurement(): Flow&lt;SensorReading&gt; =
+                        transform { sensorReading ->
+                            delay(1000) //delay moved from the collector
+                            if (sensorReading.value > 1000) throw IllegalStateException()
+                            emit(sensorReading)
+                        }
+                    </code>
+                </pre>
+                <p class="fragment" data-code-focus="2"/>
+                <aside class="notes" data-markdown>
+                    * transform each value
+                    * transform {} can be used as a building block for other operators
+                    * receiver of the block is FlowCollector, so we operate in its context
+                </aside>
+            </section>
+            <section>
+                <h4>Resource management</h4>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                    flow
+                        .validateMeasurement()
+                        .collect { println(it) }
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * can use your operator just like its built in
+                    * detail: no subscriptions
+                </aside>
+            </section>
+            <section>
+                <h4>No subscriptions</h4>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                val originalFlow: Flow&lt;SensorReading&gt; =
+                        SensorController.getAllReadingsInFlow()
+
+                val validatedFlow: Flow&lt;SensorReading&gt; =
+                        originalFlow.validateMeasurement()
+
+                val unit: Unit =
+                        validatedFlow.collect { println(it) }
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * You cannot leak a subscription
+                    * It's super safe just like the coroutines
+                </aside>
+            </section>
+            <section>
+                <h4>Error handling</h4>
+                <pre>
+                    <code class="kotlin" data-noescape>dataFlow()
+<p class="fragment fade-in">    .sendMailOnInappropriateException()</p>
+    .failAfterThree()
+    .catch { e -> println("Caught exception $e") }
+    .collect { println(it) }</code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * .catch only catches upstream to provide
+                    * exception transparency: you don't catch the exceptions of the entire stream.
+                </aside>
+            </section>
+            <section>
+                <h4>Custom error handler</h4>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        fun &lt;T&gt; Flow&lt;T&gt;.sendMailOnInappropriateException(): Flow&lt;T&gt;> =
+                            catch { e ->
+                                if (e is InappropriateException) println("Sending email...")
+                            }
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    You can quite nicely encapsulate your exception handling logic.
+                </aside>
+            </section>
+            <section>
+                <h4>Changing execution context</h4>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        SensorController
+                            .getAllReadingsInFlow()
+                            .validateMeasurement()
+                        <p class="fragment fade-in">    .flowOn(Dispatchers.IO)</p>
+                            .collect { println(it) }
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * important for Android developers
+                    * only changes upstream and then goes back to previous
+                </aside>
+            </section>
+            <section>
+                <h3>Latest addition</h3>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        val positiveNums = flowOf(1, 2, 3)
+                        val negativeNums = flowOf(-1, -2, -3)
+
+                        <b>merge(positiveNums, negativeNums)</b>
+                            .collect { println(it) }
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * operator to merge flows without preserving ordering
+                </aside>
+            </section>
+            <section>
+                <h3>Coming later</h3>
+                <pre>
+                    <code class="kotlin" data-trim data-noescape>
+                        SensorController.getAllReadingsInFlow().concurrent(4) {
+                            collect { println(it) }
+                        }<p class="fragment fade-in">.collect {}</p>
+                    </code>
+                </pre>
+                <aside class="notes" data-markdown>
+                    * nice to have concurrent processing of flows
+                    * this particular design is not great: redundant collect
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Thanks for your attention!</h3>
+                <aside class="notes" data-markdown>
+                    * My name is Krystian Rybarczyk
+                    * I enjoy searching for what's best in the JVM world
+                </aside>
+            </section>
+            <section>
+                <pre>
+                <code class="html" data-trim data-noescape="">
+                Code samples: https://github.com/krrybarc/coroutines-and-flows<br>
+                Presentation: https://knrybarczyk.github.io/flows/<br><br>
+                https://github.com/knrybarczyk<br>
+                https://linkedin.com/in/krybarczyk/
+                </code>
+                    </pre>
+                <aside class="notes" data-markdown>
+                    * Here is the presentation online and the code if you would like to have a look
+                    * Don't hesitate to get in touch with me on github or Linkedin and do talk to me after the presentation
+                    if you have any questions. I will be around
+                </aside>
+            </section>
+            <section data-background-image="images/codete_lambdadays_graf.svg">
+            </section>
+        </section>
+
+        <!--        remove until here-->
+
+        <!--        end of sections-->
     </div>
 </div>
 
@@ -60,6 +941,7 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
+		transition: 'convex',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -67,6 +949,48 @@
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 </body>
