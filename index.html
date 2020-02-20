@@ -42,33 +42,20 @@
 
 
 
+
+
+
     </script>
 
     <style type="text/css">
-        .reveal pre {
-    display: block;
-    position: relative;
-    width: 90%;
-    margin: 20px auto;
-    text-align: left;
-    font-size: 0.55em;
-    font-family: monospace;
-    line-height: 1.2em;
-    word-wrap: break-word;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-}
+.no-border{
+            box-shadow: none !important;
+            border: 0px !important;
+            background: none !important;
+        }
 
-.reveal pre code {
-    display: block;
-    padding: 5px;
-    overflow: auto;
-    max-height: 400px;
-    word-wrap: normal;
-}
-.reveal code {
-    font-family: monospace;
-    text-transform: none;
-}
+
+
 
     </style>
 </head>
@@ -183,15 +170,15 @@
 
                 <h3>IDEs</h3>
 
-                <img class="fragment" data-src="/images/as_icon.png" height="200" width="200">
-                <img class="fragment" data-src="/images/vs_code_icon.png" height="200" width="200">
+                <img class="fragment no-border" data-src="/images/as_icon.png" height="200" width="200">
+                <img class="fragment no-border" data-src="/images/vs_code_icon.png" height="200" width="200">
 
                 <h3 class="fragment">or</h3>
-                <img class="fragment" data-src="/images/terminal_icon.png" height="200" width="200">
+                <img class="fragment no-border" data-src="/images/terminal_icon.png" height="200" width="200">
 
                 <aside class="notes" data-markdown>
                     * IDEs giving us user friendly UI
-                    * and terminal using flutter framework directly
+                    * and terminal is using flutter framework directly
                 </aside>
             </section>
 
@@ -236,19 +223,56 @@
 
             <section>
                 <h3>Creation of new Plugin</h3>
-                <p>
-<!--                    <code class="plaintext" data-trim data-noescape>-->
-                        flutter <p class="fragment grow">create</p> --org com.jk --template=plugin -i swift -a kotlin sampleBatteryStateReader
-<!--                    </code>-->
-                </p>
+                <pre>
+                    <code class="hjls zhs" data-line-numbers="1|2|3|4|5|6|7">flutter create \
+> --org com.jk \
+> --template=plugin \
+> -i swift \
+> -a kotlin \
+> --androidx \
+> sampleBatteryStateReader
+
+                    </code>
+                </pre>
+
                 <aside class="notes" data-markdown>
-                    * package name in reversed order
-                    * template set to plugin specifying project type
-                    * -i swift or objc
-                    * -a kotlin or java
+                    * create If run on a project that already exists, this will repair the project, recreating any files that are missing.
+                    * package name provided in reversed domain name notation
+                    * template set to plugin specifying project type (app/module/package/plugin) - app default
+                    * -i swift or objc (default swift)
+                    * -a kotlin or java (default kotlin)
+                    * androidx (disabling by adding --no-androidx - by default enabled)
                     * project name in the end
                     * firing that command gives us running project with sample Flutter Application inside
                 </aside>
+            </section>
+
+            <section>
+                <img class="no-border" data-src="/images/ss_new_plugin_tree.png">
+            </section>
+
+            <section>
+                <h4>/lib/sampleBatteryStateReader.dart</h4>
+                <pre>
+                <code class="hjls" data-trim data-noescape data-line-numbers="1|2-3|5-9|11-15|18-22">
+class SampleBatteryStateReader {
+  static const MethodChannel _channel =
+      const MethodChannel('com.jk.sampleBatteryStateReader');
+
+  static Future&ltBatteryStatus&gt get batteryStatus async {
+    final BatteryStatus batteryStatus =
+        await _channel.invokeMethod('getBatteryStatus');
+    return batteryStatus;
+  }
+
+  static Future&ltint&gt get batteryPercentage async {
+    final int batteryPercentage =
+        await _channel.invokeMethod('getBatteryPercentage');
+    return batteryPercentage;
+  }
+}
+                </code>
+</pre>
             </section>
         </section>
 
@@ -949,6 +973,9 @@
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+
+
 
 
 
