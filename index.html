@@ -21,6 +21,15 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 
+
+
+
+
+
+
+
+
+
     </script>
 
     <style type="text/css">
@@ -29,6 +38,15 @@
             border: 0px !important;
             background: none !important;
         }
+
+
+
+
+
+
+
+
+
 
     </style>
 </head>
@@ -44,9 +62,11 @@
             <br>
             <h4>Jacek Krasowski</h4>
             <aside class="notes" data-markdown>
-                * working for Intive for almost 5 years now
-                * started as an Android dev and worked on few projects during that time, mostly VOD stuff
-                * from last November - Flutter developer, do I like it? It has potential, I'm an enthusiast :)
+                * career started 2014, Android dev
+                * currently Intive - worked on few projects during that time, mostly VOD apps
+                * last November - Flutter dev, 1 commercial app delivered
+                * do I like it? It has potential, I'm an enthusiast :)
+                * adventure
             </aside>
         </section>
 
@@ -57,20 +77,31 @@
 
             <section>
                 <h3> UI software development kit created by Google. </h3>
+
+                <aside class="notes">
+                    open-source UI SDK created by Google.
+                    long story short - a framework for crossplatform development using single codebase
+                </aside>
             </section>
 
             <section>
                 <h3>Timeline</h3>
-                <p class="fragment">2015 First version of flutter framework was released</p>
-                <p class="fragment">2018, December 4th Flutter 1.0 - "stable" version of the Framework.</p>
-                <p class="fragment">2019, December Flutter 1.12 (Current version)</p>np
+                <p class="fragment">2015 &#8594; First version of flutter framework was announced</p>
+                <p class="fragment">2018, December &#8594; Flutter 1.0 - "stable" version.</p>
+                <p class="fragment">2019, December &#8594; Flutter 1.12 (Current version)</p>
+
+                <aside class="notes" data-markdown>
+                    * first - android only
+                    * current master 1.15
+                </aside>
             </section>
 
             <section>
-                <h3>Flutter supports:</h3>
+                <h3>Supported platforms:</h3>
                 <ul>
                     <li class="fragment"><strong>Android</strong></li>
                     <li class="fragment"><strong>iOS</strong></li>
+                    <br/>
                     <li class="fragment">Windows</li>
                     <li class="fragment">Mac</li>
                     <li class="fragment">Linux</li>
@@ -80,16 +111,19 @@
             </section>
 
             <section>
-                <h3>Take it or leave it?</h3>
+                <h3>Take it?</h3>
                 <ul>
                     <li class="fragment fade-in">
-                        Framework where you write logic once, flutter builds it for many platforms
+                        Android & iOS apps from the same codebase (Less testing)
                     </li>
                     <li class="fragment fade-in">
-                        Composing UI elements is quicker than native
+                        The same app UI on older devices
                     </li>
                     <li class="fragment fade-in">
-                        Hot reload speeds up development
+                        Flutter speeds up development (i.e. hot reload)
+                    </li>
+                    <li class="fragment fade-in">
+                        Easy-to-learn development language for existing mobile developers
                     </li>
                     <li class="fragment fade-in">
                         Adding and publishing new libraries is fairly simple
@@ -101,21 +135,28 @@
 
             </section>
             <section>
-                <h3>Take it or leave it?</h3>
+                <h3>... or leave it?</h3>
+                <p class="fragment">
+                    In the real world it’s not that shiny yet… but it's getting better and better
+                </p>
                 <ul>
                     <li class="fragment fade-in">
-                        In the real world it’s not that shiny yet…
+                        Libraries & support
                     </li>
                     <li class="fragment fade-in">
-                        Still many edge-cases with no support
+                        New language, new framework (con?)
                     </li>
                     <li class="fragment fade-in">
-                        con2 todo
-                    </li>
-                    <li class="fragment fade-in">
-                        con3 todo
+                        Designed for universal UI
                     </li>
                 </ul>
+
+                <p class="fragment">Not many, huh?</p>
+                <aside class="notes" data-markdown>
+                    * issues; camera with and its rotation, webView support, qrcode scanner
+
+                </aside>
+
             </section>
         </section>
 
@@ -123,11 +164,17 @@
 
             <h3>Flutter project types:</h3>
             <ul>
-                <li class="fragment"><strong>Application</strong> &#8594; end users</li>
-                <li class="fragment"><strong>Plugin</strong> &#8594; library with native implementations</li>
-                <li class="fragment"><strong>Package</strong> &#8594; pure Dart component, like new Widget</li>
-                <li class="fragment"><strong>Module</strong> &#8594; to be used on Android or iOS as a component</li>
+                <li class="fragment"><strong>Application</strong></li>
+                <li class="fragment"><strong>Package</strong></li>
+                <li class="fragment"><strong>Module</strong></li>
+                <li class="fragment"><strong>Plugin</strong></li>
             </ul>
+            <aside class="notes" data-markdown>
+                * &#8594; for end users, apk or ipa
+                * &#8594; pure Dart component, like new Widget
+                * &#8594; integrating one full-screen Flutter instance at a time per app
+                * &#8594; library with native implementations
+            </aside>
         </section>
         <section>
             <section>
@@ -139,8 +186,10 @@
             <section>
 
                 <h3>IDEs</h3>
-
-                <img class="fragment no-border" data-src="images/as_icon.png" height="200" width="200">
+                <span class="fragment">
+                <img class="no-border" data-src="images/as_icon.png" height="200" width="200">
+                <img class="no-border" data-src="images/intelij.png" height="200" width="200">
+                </span>
                 <img class="fragment no-border" data-src="images/vs_code_icon.png" height="200" width="200">
 
                 <h3 class="fragment">or</h3>
@@ -154,7 +203,7 @@
 
             <section>
                 <h3>Android Studio</h3>
-                <img data-src="images/as_icon.png" height="200" width="200">
+                <img class=" no-border" data-src="images/as_icon.png" height="200" width="200">
                 <pre>
                     <code class="plaintext" data-trim data-noescape>
                         File
@@ -165,7 +214,7 @@
             </section>
             <section>
                 <h3>Visual Studio Code</h3>
-                <img data-src="images/vs_code_icon.png" height="200" width="200">
+                <img class=" no-border" data-src="images/vs_code_icon.png" height="200" width="200">
                 <pre>
                     <code class="plaintext" data-trim data-noescape>
                         Start Command Palette [Cmd] [shift] [P]
@@ -175,7 +224,7 @@
             </section>
             <section>
                 <h3>Terminal</h3>
-                <img data-src="images/terminal_icon.png" height="200" width="200">
+                <img class=" no-border" data-src="images/terminal_icon.png" height="200" width="200">
                 <pre>
                     <code class="plaintext" data-trim data-noescape>
                         All options available here
@@ -188,12 +237,12 @@
         <section>
             <section>
                 <h3>Let's do something serious now</h3>
-                <img class="fragment no-border" data-src="images/cat_serious.gif">
+                <img class="no-border" data-src="images/cat_serious.gif">
             </section>
 
             <section>
                 <h3>Creation of new Plugin</h3>
-                <pre><code class="hjls plaintext" data-line-numbers="1|2|3|4|5|6|7|8|9" data-trim>
+                <pre><code class="plaintext" data-line-numbers="1|2|3|4|5|6|7|8|9" data-trim>
                     flutter create \
                     > --org com.jk \
                     > --template=plugin \
@@ -207,20 +256,25 @@
                     </code></pre>
 
                 <aside class="notes" data-markdown>
-                    * create If run on a project that already exists, this will repair the project, recreating any files that are missing.
-                    * package name provided in reversed domain name notation
-                    * template set to plugin specifying project type (app/module/package/plugin) - app default
-                    * -i swift or objc (default swift)
-                    * -a kotlin or java (default kotlin)
+                    * create overrides
+                    * org - package name/prefix in the iOS bundle identifier in 'reversed domain name notation'
+                    * template specifying project type (app/module/package/plugin) - app default
                     * androidx (disabling by adding --no-androidx - by default enabled)
-                    * project name in the end
-                    * firing that command gives us running project with sample Flutter Application inside
+                    * project-name The project name for this new Flutter project. This must be a valid dart package name.
+                    * run -> sample Flutter Application inside
                 </aside>
             </section>
 
             <section>
                 <h4>Plugin project overview</h4>
                 <img class="no-border" data-src="images/ss_overview_plugin.png">
+
+                <aside class="notes">
+                    The “android” and “ios” directories hold a complete Android and iOS app respectively with all their respective files.
+                    For example if you go into “android” you’ll find a complete Android project including a manifest.xml, activities, gradle
+                    files, etc. If you want to write any platform-specific code or add permissions, you’ll have to edit these projects.
+                    The “lib” directory holds all your .dart files and most if not all your code will rest over here.
+                </aside>
             </section>
 
             <section>
@@ -240,7 +294,7 @@
 
             <section>
                 <h4>lib/sampleBatteryStateReader.dart</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1|2-3|5-9|11-15|18-22">
+                <pre><code class="dart" data-trim data-noescape data-line-numbers="1|2-3|5-9|11-15">
 class BatteryStateReader {
   static const MethodChannel _channel =
       const MethodChannel('battery_state_reader');
@@ -266,7 +320,7 @@ class BatteryStateReader {
             </section>
             <section>
                 <h4>android/../BatteryStateReaderPlugin.kt</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1-3|4-6|8-13">
+                <pre><code class="kotlin" data-trim data-noescape data-line-numbers="1-3|4-6|8-13">
 class BatteryStateReaderPlugin :
   FlutterPlugin, MethodCallHandler {
 
@@ -307,7 +361,7 @@ class BatteryStateReaderPlugin :
 
             <section>
                 <h4>android/../BatteryStateReaderPlugin.kt</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1-12">
+                <pre><code class="kotlin" data-trim data-noescape data-line-numbers="1-12">
 private fun onAttachedToEngine(
   applicationContext: Context,
   messenger: BinaryMessenger
@@ -335,7 +389,7 @@ companion object {
 
             <section>
                 <h4>android/../BatteryStateReaderPlugin.kt</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="3-8|11-16">
+                <pre><code class="kotlin" data-trim data-noescape data-line-numbers="3-8|11-16">
 companion object {
   @JvmStatic
   fun registerWith(registrar: Registrar) {
@@ -363,7 +417,7 @@ override fun onDetachedFromEngine(fpd: FlutterPluginBinding) {
 
             <section>
                 <h4>android/../BatteryStateReaderPlugin.kt</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1-13">
+                <pre><code class="kotlin" data-trim data-noescape data-line-numbers="1-13">
 override fun onMethodCall(call: MethodCall, result: Result) {
   when (call.method) {
     "getBatteryPercentage" -> {
@@ -396,7 +450,7 @@ private fun getBatteryStatus() =
 
             <section>
                 <h4>android/../BatteryStateReaderPlugin.kt</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1-3|5-12">
+                <pre><code class="kotlin" data-trim data-noescape data-line-numbers="1-3|5-12">
 private fun getBatteryPercentage() =
   batteryManager?.getIntProperty(BATTERY_PROPERTY_CAPACITY)
     ?: -1
@@ -417,7 +471,7 @@ private fun getBatteryStatus() =
 
             <section>
                 <h4>iOS/../SwiftBatteryStateReaderPlugin.swift</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1-2|4-13">
+                <pre><code class="swift" data-trim data-noescape data-line-numbers="1-2|4-13">
 public class SwiftBatteryStateReaderPlugin:
 NSObject, FlutterPlugin {
 
@@ -454,7 +508,7 @@ NSObject, FlutterPlugin {
 
             <section>
                 <h4>iOS/../SwiftBatteryStateReaderPlugin.swift</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1-13">
+                <pre><code class="swift" data-trim data-noescape data-line-numbers="1-13">
   public func handle(_ call: FlutterMethodCall,
                    result: @escaping FlutterResult) {
     switch call.method {
@@ -482,7 +536,7 @@ NSObject, FlutterPlugin {
 
             <section>
                 <h4>iOS/../SwiftBatteryStateReaderPlugin.swift</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1-5|7-13">
+                <pre><code class="swift" data-trim data-noescape data-line-numbers="1-5|7-13">
 func getMonitorableDevice() -> UIDevice{
   let device = UIDevice.current
   device.isBatteryMonitoringEnabled = true
@@ -511,7 +565,7 @@ func getBatteryStatus() -> String{
 
             <section>
                 <h4>iOS/../SwiftBatteryStateReaderPlugin.swift</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1-16">
+                <pre><code class="swift" data-trim data-noescape data-line-numbers="1-16">
 func getBatteryStatus() -> String{
   var state: String
   switch (getMonitorableDevice().batteryState) {
@@ -536,7 +590,7 @@ func getBatteryStatus() -> String{
 
             <section>
                 <h4>example/../main.dart</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="">
+                <pre><code class="dart" data-trim data-noescape data-line-numbers="">
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -551,7 +605,7 @@ class MyApp extends StatefulWidget {
 
             <section>
                 <h4>example/../main.dart</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1|2-3|5-9">
+                <pre><code class="dart" data-trim data-noescape data-line-numbers="1|2-3|5-9">
 class _MyAppState extends State&ltMyApp&gt {
   int _batteryPercentage = -1;
   String _batteryStatus = "unknown";
@@ -578,7 +632,7 @@ class _MyAppState extends State&ltMyApp&gt {
             </section>
             <section>
                 <h4>example/../main.dart</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="1-9">
+                <pre><code class="dart" data-trim data-noescape data-line-numbers="1-9">
 Future&ltvoid&gt initBatteryEntries() async {
   _batteryPercentage =
     await BatteryStateReader.batteryPercentage;
@@ -597,9 +651,13 @@ Widget build(BuildContext context) {
         title: const Text('BatteryStateReader example app'),
       ),
       body: Center(
-        child: Text('Battery percentage: $_batteryPercentage%\n'
-            'battery status: $_batteryStatus'),
-      ),
+            child: Text(
+              '$_batteryPercentage%\n\n'
+              '$_batteryStatus',
+              style: TextStyle(fontSize: 64),
+              textAlign: TextAlign.center,
+            ),
+          ),
     ),
   );
 }
@@ -611,7 +669,7 @@ Widget build(BuildContext context) {
             </section>
             <section>
                 <h4>example/../main.dart</h4>
-                <pre><code class="hjls" data-trim data-noescape data-line-numbers="">
+                <pre><code class="dart" data-trim data-noescape data-line-numbers="">
 @override
 Widget build(BuildContext context) {
   return MaterialApp(
@@ -652,30 +710,263 @@ Widget build(BuildContext context) {
 
             <section>
                 <h3>Let's add stream support</h3>
+                <br/>
+                <p>EventChannel</p>
+                <p>Setting up listeners</p>
+            </section>
 
+            <section><h3>What needs to be added?</h3></section>
+
+            <section>
+                <h3>battery_state_reader.dart</h3>
+                <pre><code data-trim data-noescape>
+static Stream&lt;String&gt; get batteryStateChanged =>
+      EventChannel('battery_state_reader_event_channel')
+          .receiveBroadcastStream()
+          .map((dynamic event) => event);
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+            </section>
+            <section>
+                <h3>android</h3>
+                <pre><code data-trim data-noescape data-line-numbers="2| 6-7 ">
+class BatteryStateReaderPlugin : FlutterPlugin, MethodCallHandler,
+  EventChannel.StreamHandler {
+  private var applicationContext: Context? = null
+  private var batteryManager: BatteryManager? = null
+  private var methodChannel: MethodChannel? = null
+  private var eventChannel: EventChannel? = null
+  private var batteryStateReceiver: BroadcastReceiver? = null
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+            </section>
+            <section>
+                <h3>android</h3>
+                <pre><code data-trim data-noescape data-line-numbers=" 10-15 ">
+private fun onAttachedToEngine(
+  applicationContext: Context,
+  messenger: BinaryMessenger
+) {
+  this.applicationContext = applicationContext
+  val service = applicationContext.getSystemService(BATTERY_SERVICE)
+  batteryManager = service as BatteryManager
+  methodChannel = MethodChannel(messenger, "battery_state_reader")
+  methodChannel?.setMethodCallHandler(this)
+  eventChannel = EventChannel(
+    messenger,
+    "battery_state_reader_event_channel"
+  )
+  eventChannel?.setStreamHandler(this)
+}
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+            </section>
+            <section>
+                <h3>android</h3>
+                <pre><code data-trim data-noescape data-line-numbers=" 1-11|13-16 ">
+override fun onListen(
+    arguments: Any?,
+    events: EventSink?
+  ) {
+    batteryStateReceiver =
+      createChargingStateChangeReceiver(events)
+    applicationContext?.registerReceiver(
+      batteryStateReceiver,
+      IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+    )
+  }
+
+override fun onCancel(arguments: Any?) {
+  applicationContext?.unregisterReceiver(batteryStateReceiver)
+  batteryStateReceiver = null
+  }
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+            </section>
+            <section>
+                <h3>android</h3>
+                <pre><code data-trim data-noescape data-line-numbers=" ">
+private fun createBatteryStateReceiver(events: EventSink?):
+        BroadcastReceiver {
+  return object : BroadcastReceiver() {
+    override fun onReceive(
+      context: Context?,
+      intent: Intent?
+    ) {
+      events?.success(getBatteryStatus())
+    }
+  }
+}
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+            </section>
+            <section>
+                <h3>iOS</h3>
+                <pre><code data-trim data-noescape data-line-numbers="10-14">
+public static func register(
+    with registrar: FlutterPluginRegistrar) {
+    let methodChannel =
+      FlutterMethodChannel(
+        name: "battery_state_reader",
+        binaryMessenger: registrar.messenger())
+    let instance = SwiftBatteryStateReaderPlugin()
+    registrar.addMethodCallDelegate(
+      instance, channel: methodChannel)
+    let eventChannel =
+      FlutterEventChannel(
+        name: "battery_state_reader_event_channel",
+        binaryMessenger: registrar.messenger())
+    eventChannel.setStreamHandler(instance)
+  }
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+            </section>
+            <section>
+                <h3>iOS</h3>
+                <pre><code data-trim data-noescape data-line-numbers="">
+public func onListen(
+  withArguments arguments: Any?,
+  eventSink: @escaping FlutterEventSink) -> FlutterError? {
+  self.eventSink = eventSink
+  sendBatteryStateEvent()
+  NotificationCenter.default.addObserver(
+    self,
+    selector: #selector(handleBatteryStatusChange),
+    name: UIDevice.batteryStateDidChangeNotification,
+    object: nil)
+  return nil
+}
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+            </section>
+            <section>
+                <h3>iOS</h3>
+                <pre><code data-trim data-noescape data-line-numbers="1-8|10-15">
+private func sendBatteryStateEvent() {
+  guard let eventSink = eventSink else { return }
+  eventSink(getBatteryStatus())
+}
+
+@objc func handleBatteryStatusChange() {
+  sendBatteryStateEvent()
+}
+
+public func onCancel(
+  withArguments arguments: Any?) -> FlutterError? {
+  NotificationCenter.default.removeObserver(self)
+  eventSink = nil
+  return nil
+}
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+            </section>
+
+            <section>
+                <h3>example</h3>
+                <pre><code data-trim data-noescape>
+Align(
+    alignment: Alignment.bottomCenter,
+    child: StreamBuilder(
+        stream: BatteryStateReader.batteryStateChanged,
+        builder: (context, state) {
+          Color batteryStateColor = Colors.red;
+          if (state.data == "charging" || state.data=="full")
+                batteryStateColor = Colors.green;
+          return Text(
+            state.data,
+            style: TextStyle(
+              fontSize: 64,
+              color: batteryStateColor,
+            ),
+          );
+        }),
+  )
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    *
+                </aside>
+            </section>
+
+            <section>
+                <h3>Result?</h3>
+                <img class="no-border" data-src="images/movie_ios.gif" height="500">
+                <img class="no-border" data-src="images/movie_android.gif" height="500">
             </section>
         </section>
 
-        <section>
-
-            Publish to pub!
-
-            How to polish your publish :) (for better score)
-
-        </section>
 
         <section>
-            <img class="no-border" data-src="images/no_more.gif" >
-        </section>
+            <section>
 
+                <h3>Let's publish it</h3>
+
+            </section>
+            <section>
+
+                <h3>Steps</h3>
+                <br/>
+                <p class="fragment">Push to github</p>
+                <p class="fragment">run 'flutter packages pub publish —dry -run'</p>
+                <img class="fragment no-border" data-src="images/ss_publish_warnings.png"/>
+
+            </section>
+            <section>
+
+                <h4>Then</h4>
+                <br/>
+                <p class="fragment">Fix all the warnings...</p>
+                <p class="fragment">Until you'll see</p>
+                <img class="fragment no-border" data-src="images/ss_publish_no_warn.png"/>
+
+            </section>
+            <section>
+
+                <h4>Then</h4>
+                <br/>
+                <p class="fragment">run 'flutter packages pub publish'</p>
+
+                <img class="fragment no-border" data-src="images/ss_published.png"/>
+
+                </code></pre>
+                <aside class="notes" data-markdown>
+                    * updates
+                    * usage in pubspec.yaml (dpendencies section)
+                </aside>
+            </section>
+            <section>
+
+                <img class="no-border" data-src="images/ss_pub.png"/>
+
+            </section>
+
+        </section>
+        <section>
+            <img class="no-border" data-src="images/no_more.gif">
+        </section>
         <section>
             <h2>Thank you!</h2>
 
             <br>
-            <img class="no-border" data-src="images/qr.png" ><br/>
+            <img class="no-border" data-src="images/qr.png"><br/>
             <span>jacqqq.github.io/in_mobile</span><br/>
 
-            <span>pub.dev/battery_state_reader</span>
+            <span>https://pub.dev/packages/battery_state_reader</span>
 
             <aside class="notes" data-markdown>
                 *
@@ -701,6 +992,15 @@ Widget build(BuildContext context) {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+
+
+
+
+
+
+
+
 
 
 
